@@ -4,24 +4,11 @@ AI-powered financial operations phone agent built with CALL-E.
 
 ## Problem
 
-Finance teams spend significant time following up with customers
-about overdue invoices. These calls are repetitive, time-consuming,
-and difficult to track consistently.
+Finance teams spend significant time manually following up with customers about overdue invoices.
 
 ## Solution
 
-FinCall prioritizes overdue invoices and uses CALL-E to make an
-AI-powered phone call to the customer.
-
-The agent:
-
-1. Selects an overdue invoice.
-2. Calls the customer through CALL-E.
-3. Discusses the outstanding payment.
-4. Determines the customer's payment status.
-5. Extracts the expected payment date.
-6. Determines whether follow-up is required.
-7. Recommends the next action.
+FinCall prioritizes overdue invoices and uses CALL-E to conduct AI-powered payment follow-up calls. It extracts structured payment outcomes and recommends the next finance action.
 
 ## Features
 
@@ -30,23 +17,19 @@ The agent:
 - Structured payment-status extraction
 - Expected payment-date extraction
 - Call evidence
+- Persistent call history
 - Recommended next actions
 - Streamlit dashboard
 - CALL-E Python SDK integration
 
 ## Architecture
 
-Streamlit UI
-    ↓
-FinCall Python application
-    ↓
-CALL-E Python SDK
-    ↓
-AI phone conversation
-    ↓
-Structured financial outcome
-    ↓
-Recommended next action
+Streamlit Dashboard
+→ FinCall Python Application
+→ CALL-E
+→ AI Phone Conversation
+→ Structured Financial Outcome
+→ Recommended Next Action
 
 ## Tech Stack
 
@@ -55,15 +38,40 @@ Recommended next action
 - CALL-E
 - Python-dotenv
 
+## Dashboard
+
+![FinCall Dashboard](assets/dashboard.png)
+
 ## Setup
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/YOUR_USERNAME/FinCall.git
 cd FinCall
 
 python -m venv .venv
+```
 
-# Windows
-.venv\Scripts\activate
+Activate the environment and install:
 
+```bash
 pip install -r requirements.txt
+```
+
+Create .env:
+
+```bash
+CALLE_API_KEY=your_api_key
+```
+
+Run:
+
+```bash
+streamlit run app.py
+```
+
+## Safety
+
+- Never commit API credentials.
+- Use only authorized phone numbers for live calls.
+- Public examples use masked phone numbers.
+- Live calls are explicitly initiated by the user.
