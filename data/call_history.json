@@ -1,0 +1,13 @@
+{
+  "INV-1042": {
+    "payment_status": "payment_promised",
+    "expected_payment_date": "2026-09-18",
+    "follow_up_required": true,
+    "evidence": [
+      "A live recipient answered and engaged with the invoice follow-up.",
+      "Payment status was obtained: not yet paid.",
+      "Expected payment date was obtained: September 18, 2026."
+    ],
+    "called_at": "2026-09-14 20:00:00"
+  }
+}
