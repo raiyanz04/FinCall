@@ -1,0 +1,1 @@
+invoice_id,customer_id,amount,prior_delay_days,follow_up_count,promised_flag,duration_days,event_observed,observation_date,data_source

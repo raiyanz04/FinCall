@@ -1,0 +1,6 @@
+calle-ai
+python-dotenv
+streamlit>=1.35
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
